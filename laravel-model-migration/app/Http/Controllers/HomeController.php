@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 class HomeController extends Controller
 {
     public function index(){
-        // $viaggi = Viaggio::all();
+        $viaggi = Viaggio::all();
         
-        return view ('home', );
+        return view ('home', compact('viaggi') );
     }
 }

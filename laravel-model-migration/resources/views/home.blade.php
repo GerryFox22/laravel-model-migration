@@ -13,16 +13,16 @@
     <div class="container">
     <h1 class="text-center p-5">Viaggi di Natale</h1>
         <div class="row">
-        
-                <div class="col-3 pb-5 text-center">
-                    <h3 class="pb-4">Titolo Viaggio</h3>
-                    <p><span class="text-danger">Prezzo :</span>  </p>
-                    <p><span class="text-danger">Durata: </span></p>
-                    <p><span class="text-danger">Partenze: </span></p>
-                    <p><span class="text-danger">Min Partecipanti: </span></p>
-                    <p><span class="text-danger">Descrizione: </span></p>
+            @foreach ($viaggi as $viaggio)
+                <div class="col-4 pb-5">
+                    <h5 class="pb-4"> {{$viaggio->titolo_viaggio}} </h5>
+                    <p><span class="text-danger">Prezzo :</span> {{$viaggio->prezzo}} </p>
+                    <p><span class="text-danger">Durata: </span>{{$viaggio->durata}}</p>
+                    <p><span class="text-danger">Partenze: </span>{{$viaggio->data_di_partenza}}</p>
+                    <p><span class="text-danger">Min Partecipanti: </span>{{$viaggio->partecipanti}}</p>
+                    <p><span class="text-danger">Descrizione: </span>{{$viaggio->descrizione}}</p>
                 </div>
-            
+            @endforeach
          
         </div>
     </div>
